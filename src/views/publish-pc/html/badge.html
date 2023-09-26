@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, inital-scale=1.0" />
 
-    <title>밷지</title>
-    <link rel="stylesheet" type="text/css" href="../../basic/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="components.css" />
+    <title>아코디언</title>
+    <link rel="stylesheet" type="text/css" href="/src/assets/pc/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="list.css" />
 
-    <script src="../js/include.js"></script>
+    <script src="include.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
@@ -24,7 +24,7 @@
   <body>
     <div class="wrap">
       <!-- headerWrap -->
-      <div class="header_wrap" w3-include-html="../include/header.html"></div>
+      <div class="header_wrap" w3-include-html="./include/header.html"></div>
       <!-- headerWrap -->
 
       <main>
@@ -46,44 +46,33 @@
           </section>
 
           <section>
-            <h1><span class="badge bg_primary">label</span> Example heading</h1>
-            <h2><span class="badge bg_primary">label</span> Example heading</h2>
-            <h3><span class="badge bg_primary">label</span> Example heading</h3>
-            <h4><span class="badge bg_primary">label</span> Example heading</h4>
-            <h5><span class="badge bg_primary">label</span> Example heading</h5>
-            <h6><span class="badge bg_primary">label</span> Example heading</h6>
+            <p><span class="badge">label</span>badge</p>
+            <p><span class="badge bg-gray">label</span> badge bg-gray</p>
+            <p>badge <span class="badge">label</span></p>
+            <p>badge bg-gray<span class="badge bg-gray">label</span></p>
+
+            <pre class="theme-codepen-embed">
+              <code class="language-html">&#x3C;p&#x3E;&#x3C;span class=&#x22;badge&#x22;&#x3E;label&#x3C;/span&#x3E;badge&#x3C;/p&#x3E;
+&#x3C;p&#x3E;&#x3C;span class=&#x22;badge bg-gray&#x22;&#x3E;label&#x3C;/span&#x3E; badge bg-gray&#x3C;/p&#x3E;
+&#x3C;p&#x3E;badge &#x3C;span class=&#x22;badge&#x22;&#x3E;label&#x3C;/span&#x3E;&#x3C;/p&#x3E;
+&#x3C;p&#x3E;badge bg-gray&#x3C;span class=&#x22;badge bg-gray&#x22;&#x3E;label&#x3C;/span&#x3E;&#x3C;/p&#x3E;</code>
+            </pre>
           </section>
         </article>
 
         <!-- quick -->
-        <article class="quick" w3-include-html="../include/quick.html"></article>
+        <article class="quick" w3-include-html="./include/quick.html"></article>
         <!-- //quick -->
       </main>
 
       <!-- footer -->
-      <footer w3-include-html="../include/footer.html"></footer>
+      <footer w3-include-html="./include/footer.html"></footer>
       <!-- //footer -->
     </div>
   </body>
-  <script src="../../js/ui.js"></script>
+  <script src="/src/assets/pc/js/ui.js"></script>
 
   <script>
     includeHTML();
-    //아코디언
-    const items = document.querySelectorAll(".accordion button");
-
-    function toggleAccordion() {
-      const itemToggle = this.getAttribute("aria-expanded");
-
-      for (i = 0; i < items.length; i++) {
-        items[i].setAttribute("aria-expanded", "false");
-      }
-
-      if (itemToggle == "false") {
-        this.setAttribute("aria-expanded", "true");
-      }
-    }
-
-    items.forEach((item) => item.addEventListener("click", toggleAccordion));
   </script>
 </html>

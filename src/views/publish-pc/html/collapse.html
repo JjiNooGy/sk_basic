@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, inital-scale=1.0" />
 
     <title>아코디언</title>
-    <link rel="stylesheet" type="text/css" href="../../basic/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="components.css" />
+    <link rel="stylesheet" type="text/css" href="/src/assets/pc/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="list.css" />
 
-    <script src="../js/include.js"></script>
+    <script src="include.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
@@ -24,7 +24,7 @@
   <body>
     <div class="wrap">
       <!-- headerWrap -->
-      <div class="header_wrap" w3-include-html="../include/header.html"></div>
+      <div class="header_wrap" w3-include-html="./include/header.html"></div>
       <!-- headerWrap -->
 
       <main>
@@ -38,12 +38,10 @@
 
           <section>
             <p class="clause">textarea</p>
-            <div class="wrap-textarea">
-              <div class="box-textarea md">
-                <textarea placeholder="textarea."></textarea>
-              </div>
-              <p class="txt-cnt"><span>0</span>/500</p>
-            </div>
+
+            <a class="btn" href="#collapse" role="button" aria-expanded="false" aria-controls="collapse"> Simple collapsible </a>
+
+            <div id="collapse" class="collapse">Lorem ipsum dolor text....</div>
 
             <pre class="theme-codepen-embed">
               <code class="language-html">&#x3C;div class=&#x22;wrap-textarea&#x22;&#x3E;
@@ -57,16 +55,16 @@
         </article>
 
         <!-- quick -->
-        <article class="quick" w3-include-html="../include/quick.html"></article>
+        <article class="quick" w3-include-html="./include/quick.html"></article>
         <!-- //quick -->
       </main>
 
       <!-- footer -->
-      <footer w3-include-html="../include/footer.html"></footer>
+      <footer w3-include-html="./include/footer.html"></footer>
       <!-- //footer -->
     </div>
   </body>
-  <script src="../../js/ui.js"></script>
+  <script src="/src/assets/pc/js/ui.js"></script>
 
   <script>
     includeHTML();

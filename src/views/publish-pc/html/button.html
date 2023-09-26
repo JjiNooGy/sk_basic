@@ -5,33 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, inital-scale=1.0" />
 
-    <title>버튼</title>
-    <link rel="stylesheet" type="text/css" href="../../basic/css/style.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="components.css" /> -->
+    <title>아코디언</title>
+    <link rel="stylesheet" type="text/css" href="/src/assets/pc/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="list.css" />
 
-    <script src="../../js/include.js"></script>
+    <script src="include.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 
     <!-- and it's easy to individually load additional languages -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
-    <style>
-      section > .clause {
-        padding: 20px 0;
-        font-size: 28px;
-        font-weight: 700;
-      }
-    </style>
+
     <script>
       hljs.highlightAll();
     </script>
-    <style></style>
   </head>
   <body>
     <div class="wrap">
       <!-- headerWrap -->
-      <div class="header_wrap" w3-include-html="../include/header.html"></div>
+      <div class="header_wrap" w3-include-html="./include/header.html"></div>
       <!-- headerWrap -->
 
       <main>
@@ -115,7 +108,7 @@
           </section>
 
           <section>
-            <h3 class="clause">a 태그 상용</h3>
+            <h3 class="clause">a 태그 사용</h3>
             <!-- 기본버튼 구조 -->
             <div class="btn-wrap">
               <div class="btn-box">
@@ -212,29 +205,64 @@
             <!-- //fixed -->
 
             <pre class="theme-codepen-embed">
-              <code class="language-html">&#x3C;div class=&#x22;btn-wrap&#x22;&#x3E;
+              <code class="language-html">&#x3C;!-- full --&#x3E;
+&#x3C;div class=&#x22;btn-wrap&#x22;&#x3E;
   &#x3C;div class=&#x22;btn-box&#x22;&#x3E;
-    &#x3C;button class=&#x22;btn-primary&#x22;&#x3E;&#xBC84;&#xD2BC;&#xBA85;&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-primary&#x22;&#x3E;primary&#x3C;/button&#x3E;
   &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!-- //full --&#x3E;
+
+&#x3C;!-- half --&#x3E;
+&#x3C;div class=&#x22;btn-wrap&#x22;&#x3E;
   &#x3C;div class=&#x22;btn-box&#x22;&#x3E;
-    &#x3C;button class=&#x22;btn-gray&#x22;&#x3E;&#xBC84;&#xD2BC;&#xBA85;&#x3C;/button&#x3E;
-    &#x3C;button class=&#x22;btn-primary&#x22;&#x3E;&#xBC84;&#xD2BC;&#xBA85;&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-gray&#x22;&#x3E;gray&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-line&#x22;&#x3E;line&#x3C;/button&#x3E;
   &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;</code>
+&#x3C;/div&#x3E;
+&#x3C;!-- //half --&#x3E;
+
+&#x3C;!-- 2:1 --&#x3E;
+&#x3C;div class=&#x22;btn-wrap col2&#x22;&#x3E;
+  &#x3C;div class=&#x22;btn-box&#x22;&#x3E;
+    &#x3C;button class=&#x22;btn-primary&#x22;&#x3E;primary&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-gray&#x22;&#x3E;gray&#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!-- //2:1 --&#x3E;
+
+&#x3C;!-- 1:2 --&#x3E;
+&#x3C;div class=&#x22;btn-wrap col1&#x22;&#x3E;
+  &#x3C;div class=&#x22;btn-box&#x22;&#x3E;
+    &#x3C;button class=&#x22;btn-primary&#x22;&#x3E;primary&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-gray&#x22;&#x3E;gray&#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!-- //1:2 --&#x3E;
+
+&#x3C;!-- fixed --&#x3E;
+&#x3C;div class=&#x22;btn-wrap fixed&#x22;&#x3E;
+  &#x3C;div class=&#x22;btn-box&#x22;&#x3E;
+    &#x3C;button class=&#x22;btn-primary&#x22;&#x3E;primary&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-gray wp20&#x22;&#x3E;gray&#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!-- //fixed --&#x3E;</code>
             </pre>
           </section>
         </article>
 
         <!-- quick -->
-        <article class="quick" w3-include-html="../include/quick.html"></article>
+        <article class="quick" w3-include-html="./include/quick.html"></article>
         <!-- //quick -->
       </main>
 
       <!-- footer -->
-      <footer w3-include-html="../include/footer.html"></footer>
+      <footer w3-include-html="./include/footer.html"></footer>
       <!-- //footer -->
     </div>
   </body>
+  <script src="/src/assets/pc/js/ui.js"></script>
 
   <script>
     includeHTML();
