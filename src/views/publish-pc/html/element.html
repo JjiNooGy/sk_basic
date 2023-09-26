@@ -4,25 +4,28 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, inital-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../../basic/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="components.css" />
 
-    <!-- <link rel="stylesheet" type="text/css" href="../../css/rtil.css" /> -->
+    <title>게시판 샘플</title>
+    <!-- <link rel="stylesheet" type="text/css" href="/src/assets/fonts.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../../../assets/pc/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="list.css" />
 
-    <script src="../../js/include.js"></script>
+    <script src="include.js"></script>
 
-    <style>
-      section > .clause {
-        padding: 20px 0;
-        font-size: 28px;
-        font-weight: 700;
-      }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <script>
+      hljs.highlightAll();
+    </script>
   </head>
   <body>
     <div class="wrap">
       <!-- headerWrap -->
-      <div class="header_wrap mt_10" w3-include-html="../include/header.html"></div>
+      <div class="header_wrap" w3-include-html="./include/header.html"></div>
       <!-- headerWrap -->
 
       <main style="min-height: 800px">
@@ -296,17 +299,17 @@
         </article>
 
         <!-- quick -->
-        <article class="quick" w3-include-html="../include/quick.html"></article>
+        <article class="quick" w3-include-html="./include/quick.html"></article>
         <!-- //quick -->
       </main>
 
       <!-- footer -->
-      <footer w3-include-html="../include/footer.html"></footer>
+      <footer w3-include-html="./include/footer.html"></footer>
       <!-- //footer -->
     </div>
   </body>
-  <script src="../../js/ui.js"></script>
-  <script src="../../basic/js/ui.basic.js"></script>
+  <script src="../../../assets/pc/js/ui.js"></script>
+
   <script>
     includeHTML();
   </script>
