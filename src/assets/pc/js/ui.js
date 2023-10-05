@@ -122,3 +122,25 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+/******************************
+///////팝업스크립트
+******************************/
+var target = document.querySelectorAll(".open-pop");
+var btnPopClose = document.querySelectorAll(".popup-wrap .pop-close");
+var targetID;
+// 팝업 열기
+for (var i = 0; i < target.length; i++) {
+  target[i].addEventListener("click", function () {
+    targetID = this.getAttribute("data-rel");
+    document.querySelector(targetID).style.display = "block";
+  });
+}
+
+// 팝업 닫기
+for (var j = 0; j < target.length; j++) {
+  btnPopClose[j].addEventListener("click", function () {
+    //    document.querySelector(targetID).style.display = 'none';
+    this.parentNode.parentNode.parentNode.style.display = "none";
+  });
+}
