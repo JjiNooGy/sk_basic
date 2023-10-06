@@ -24,12 +24,23 @@
     border-radius: 16px;
     overflow: hidden;
     .pop-header {
-      width: 100%;
+      position: relative;
       display: flex;
-      padding: 20px 30px 20px 24px;
-      border-bottom: 1px solid #eceef0;
+      width: 100%;
+      height: 68px;
+      padding: 22px 30px;
       border-radius: 16px 16px 0 0;
       background: #fff;
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        background-color: #fff;
+      }
 
       h2 {
         color: var(--txt-defult);
@@ -51,7 +62,6 @@
         width: 24px;
         height: 24px;
         margin-left: auto;
-        margin-top: 6px;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M18 6L6 18M18 18L6 6' stroke='%2350555C' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       }
     }

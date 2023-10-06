@@ -6,10 +6,8 @@
   border-radius: var(--border-radius-form);
 }
 
-.box-input {
-  border: 2px solid #ff5d01;
-  padding: 21px 30px;
-  border-radius: 118px;
+.input-box {
+  position: relative;
 
   input,
   select {
@@ -17,5 +15,55 @@
     border: none;
     color: var(--form-text);
     outline: 1px solid #fefefe;
+
+    display: flex;
+    width: 100%;
+    padding: 10px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--gray-200-d-4-d-7-dc, #d4d7dc);
+    background: var(--sk-white-ffffff, #fff);
+  }
+
+  input {
+    &:read-only {
+      border-radius: 8px;
+      border: 1px solid var(--gray-200-d-4-d-7-dc, #d4d7dc);
+      background: var(--gray-50-f-7-f-7-f-9, #f7f7f9);
+    }
+    &:disabled {
+      border-radius: 8px;
+      border: 1px solid transparent;
+      background: var(--gray-50-f-7-f-7-f-9, #f7f7f9);
+    }
+
+    &.error {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: var(--btn-line-padd, 12px);
+      align-self: stretch;
+      border: 1px solid #f71010;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='25' viewBox='0 0 24 25' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 22.4572C17.5228 22.4572 22 17.98 22 12.4572C22 6.93431 17.5228 2.45715 12 2.45715C6.47715 2.45715 2 6.93431 2 12.4572C2 17.98 6.47715 22.4572 12 22.4572ZM11.0951 15.7299C11.0323 15.8814 11 16.0439 11 16.2079C11 16.5392 11.1317 16.857 11.3661 17.0913C11.6005 17.3255 11.9185 17.4572 12.25 17.4572C12.5815 17.4572 12.8995 17.3255 13.1339 17.0913C13.3683 16.857 13.5 16.5392 13.5 16.2079C13.5 16.0439 13.4677 15.8814 13.4049 15.7299C13.342 15.5783 13.25 15.4406 13.1339 15.3246C13.0178 15.2086 12.88 15.1166 12.7284 15.0538C12.5767 14.991 12.4142 14.9587 12.25 14.9587C12.0858 14.9587 11.9233 14.991 11.7716 15.0538C11.62 15.1166 11.4822 15.2086 11.3661 15.3246C11.25 15.4406 11.158 15.5783 11.0951 15.7299ZM11.1715 8.2387C11.1225 8.38944 11.1059 8.54877 11.1225 8.70637L11.56 13.0874C11.5747 13.2595 11.6535 13.4198 11.7808 13.5366C11.9081 13.6535 12.0747 13.7183 12.2475 13.7183C12.4203 13.7183 12.5869 13.6535 12.7142 13.5366C12.8415 13.4198 12.9203 13.2595 12.935 13.0874L13.3725 8.70637C13.3891 8.54877 13.3725 8.38944 13.3235 8.2387C13.2745 8.08796 13.1944 7.9492 13.0884 7.8314C12.9823 7.71361 12.8526 7.61942 12.7077 7.55494C12.5629 7.49047 12.4061 7.45715 12.2475 7.45715C12.0889 7.45715 11.9321 7.49047 11.7873 7.55494C11.6424 7.61942 11.5127 7.71361 11.4066 7.8314C11.3006 7.9492 11.2205 8.08796 11.1715 8.2387Z' fill='%23F71010'/%3E%3C/svg%3E");
+      }
+
+      & + .msg {
+        color: var(--status-error-f-71010, #f71010);
+      }
+    }
+  }
+  .msg {
+    margin-top: 11px;
+    margin-left: 4px;
+    font-size: 11px;
+    line-height: 16px;
   }
 }
