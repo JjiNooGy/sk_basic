@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, inital-scale=1.0" />
 
     <title>게시판 샘플</title>
-    <link rel="stylesheet" type="text/css" href="../../../assets/pc/css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../assets/pc/css/style.css"
+    />
     <link rel="stylesheet" type="text/css" href="list.css" />
 
     <script src="include.js"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 
     <!-- and it's easy to individually load additional languages -->
@@ -31,13 +38,15 @@
         <article>
           <section>
             <div class="page-title">
-              <h2 class="title">텍스트에어리어</h2>
-              <p class="title-desc">SK 렌터카의 새로운 소식과 정보들을 한곳에서 확인할 수 있어요.</p>
+              <h2 class="title">input</h2>
+              <p class="title-desc">
+                SK 렌터카의 새로운 소식과 정보들을 한곳에서 확인할 수 있어요.
+              </p>
             </div>
           </section>
 
           <section>
-            <p class="clause">textarea</p>
+            <p class="clause">input</p>
 
             <div class="input-box">
               <input type="text" value="Text" />
@@ -56,6 +65,15 @@
               <span class="msg error">에러메세지</span>
             </div>
 
+            <template>
+              <div>
+                <input name="email" v-model="email" />
+                <span>{{ emailError }}</span>
+                <input name="password" v-model="password" type="password" />
+                <span>{{ passwordError }}</span>
+              </div>
+            </template>
+            <!-- 
             <div class="input-box">
               <input type="button" />
               <input type="checkbox" />
@@ -79,7 +97,7 @@
               <input type="time" />
               <input type="url" />
               <input type="week" />
-            </div>
+            </div> -->
 
             <pre class="theme-codepen-embed">
               <code class="language-html">&#x3C;div class=&#x22;input-box&#x22;&#x3E;
@@ -103,5 +121,46 @@
 
   <script>
     includeHTML();
+
+    const inputLeft = document.getElementById("input-left");
+    const inputRight = document.getElementById("input-right");
+
+    const thumbLeft = document.querySelector(".thumb.left");
+    const thumbRight = document.querySelector(".thumb.right");
+
+    const range = document.querySelector(".range");
+
+    const setLeftValue = (e) => {
+      const _this = e.target;
+      const { value, min, max } = _this;
+
+      if (+inputRight.value - +value < 10) {
+        _this.value = +inputRight.value - 10;
+      }
+
+      const percent = ((+_this.value - +min) / (+max - +min)) * 100;
+
+      thumbLeft.style.left = `${percent}%`;
+      range.style.left = `${percent}%`;
+    };
+
+    const setRightValue = (e) => {
+      const _this = e.target;
+      const { value, min, max } = _this;
+
+      if (+value - +inputLeft.value < 10) {
+        _this.value = +inputLeft.value + 10;
+      }
+
+      const percent = ((+_this.value - +min) / (+max - +min)) * 100;
+
+      thumbRight.style.right = `${100 - percent}%`;
+      range.style.right = `${100 - percent}%`;
+    };
+
+    if (inputLeft && inputRight) {
+      inputLeft.addEventListener("input", setLeftValue);
+      inputRight.addEventListener("input", setRightValue);
+    }
   </script>
 </html>
