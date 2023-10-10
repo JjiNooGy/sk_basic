@@ -135,7 +135,7 @@
 
       <main>
         <section class="sub-top">‘현대자동차’에 대한 검색결과</section>
-        <aside w3-include-html="./include/aside.html"></aside>
+        <aside class="lnb-wrap" w3-include-html="./include/aside.html"></aside>
 
         <article class="content">
           <section>
@@ -258,46 +258,5 @@
     includeHTML();
 
     filterArcoddian();
-
-    // 패밀리사이트 셀렉트박스 스크립트
-    const familyElements = document.querySelectorAll(".FamilySite");
-
-    function toggleSelectBox(familyBox) {
-      familyBox.classList.toggle("active");
-    }
-
-    familyElements.forEach((familyBoxElement) => {
-      familyBoxElement.addEventListener("click", function (e) {
-        const targetElement = e.target;
-        const isOptionElement = targetElement.classList.contains("option");
-
-        if (isOptionElement) {
-          selectOption(targetElement);
-        }
-
-        toggleSelectBox(familyBoxElement);
-      });
-    });
-
-    document.addEventListener("click", function (e) {
-      const targetElement = e.target;
-      const isSelect = targetElement.classList.contains("select") || targetElement.closest(".FamilySite");
-
-      if (isSelect) {
-        return;
-      }
-
-      const allFamilyElements = document.querySelectorAll(".FamilySite");
-
-      allFamilyElements.forEach((boxElement) => {
-        boxElement.classList.remove("active");
-      });
-    });
-
-    // 모바일 사업자정보 펼침 토글
-    function moreView() {
-      let menu = document.querySelector(".info-detail");
-      menu.classList.toggle("active");
-    }
   </script>
 </html>
