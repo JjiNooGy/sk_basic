@@ -39,19 +39,42 @@
 
           <section>
             <p class="clause">textarea</p>
-            <div class="wrap-textarea">
-              <div class="box-textarea md">
-                <textarea placeholder="textarea."></textarea>
+
+            <!-- 댓글 작성 영역 -->
+            <div class="comment-wrap">
+              <div class="comment-header">
+                <strong class="comment-userid">홍길동</strong>
               </div>
-              <p class="txt-cnt"><span>0</span>/500</p>
+              <div class="comment_body">
+                <div class="wrap-textarea">
+                  <div class="box-textarea md">
+                    <textarea placeholder="후기/댓글을 입력해주세요."></textarea>
+                  </div>
+                  <p class="txt-cnt"><span>0</span>/500</p>
+                </div>
+              </div>
+              <div class="comment-footer">
+                <button type="button" class="btn btn-gray">등록</button>
+              </div>
             </div>
+            <!-- //댓글 작성 영역 -->
 
             <pre class="theme-codepen-embed">
-              <code class="language-html">&#x3C;div class=&#x22;wrap-textarea&#x22;&#x3E;
-  &#x3C;div class=&#x22;box-textarea md&#x22;&#x3E;
-    &#x3C;textarea placeholder=&#x22;textarea.&#x22;&#x3E;&#x3C;/textarea&#x3E;
+              <code class="language-html">&#x3C;div class=&#x22;comment-wrap&#x22;&#x3E;
+  &#x3C;div class=&#x22;comment-header&#x22;&#x3E;
+    &#x3C;strong class=&#x22;comment-userid&#x22;&#x3E;&#xD64D;&#xAE38;&#xB3D9;&#x3C;/strong&#x3E;
   &#x3C;/div&#x3E;
-  &#x3C;p class=&#x22;txt-cnt&#x22;&#x3E;&#x3C;span&#x3E;0&#x3C;/span&#x3E;/500&#x3C;/p&#x3E;
+  &#x3C;div class=&#x22;comment_body&#x22;&#x3E;
+    &#x3C;div class=&#x22;wrap-textarea&#x22;&#x3E;
+      &#x3C;div class=&#x22;box-textarea md&#x22;&#x3E;
+        &#x3C;textarea placeholder=&#x22;&#xD6C4;&#xAE30;/&#xB313;&#xAE00;&#xC744; &#xC785;&#xB825;&#xD574;&#xC8FC;&#xC138;&#xC694;.&#x22;&#x3E;&#x3C;/textarea&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;p class=&#x22;txt-cnt&#x22;&#x3E;&#x3C;span&#x3E;0&#x3C;/span&#x3E;/500&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;comment-footer&#x22;&#x3E;
+    &#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-gray&#x22;&#x3E;&#xB4F1;&#xB85D;&#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;</code>
             </pre>
           </section>
