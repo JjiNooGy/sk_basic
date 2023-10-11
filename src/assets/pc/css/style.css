@@ -5916,6 +5916,62 @@ table td a .category {
 }
 
 /**************************************************************************************************
+  *** 입출력 테이블
+  **************************************************************************************************/
+.print-table {
+  width: 100%;
+  border-top: 2px solid var(--grayscale-500, #50555c);
+  position: relative;
+}
+.print-table .row {
+  width: 100%;
+  border-bottom: 1px solid var(--grayscale-200, #d4d7dc);
+  display: table;
+}
+.print-table .row .col {
+  width: 50%;
+  display: table-cell;
+}
+.print-table .row .col-box {
+  display: flex;
+  width: 100%;
+}
+.print-table .row .col-box .col-label {
+  display: flex;
+  align-items: center;
+  width: 220px;
+  min-height: 70px;
+  padding: 16px 30px;
+  background: #f2f2f2;
+  border-right: 1px solid var(--grayscale-200, #d4d7dc);
+  color: var(--txt-defult);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.print-table .row .col-box .col-label .req {
+  position: relative;
+}
+.print-table .row .col-box .col-label .req::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #fa4e29;
+  position: absolute;
+  left: -6px;
+  top: 0;
+}
+.print-table .row .col-box .col-cell {
+  width: calc(100% - 220px);
+  display: flex;
+  align-items: center;
+  padding: 11px 12px 11px 30px;
+  color: var(--txt-defult);
+}
+
+/**************************************************************************************************
 *** radio check
 **************************************************************************************************/
 .check-radio {
