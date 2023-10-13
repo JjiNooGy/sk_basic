@@ -59,6 +59,10 @@
 
   /* border-radius */
   --border-radius-form: 8px;
+
+  /* button */
+  --btn-bg-gray: #eceef0;
+  --btn-bg-primary: linear-gradient(91deg, #120808 1.64%, rgba(254, 83, 45, 0.84) 116.61%);
 }
 
 /*** reset ***/
@@ -110,10 +114,10 @@ textarea::placeholder {
 .flex {
   display: flex;
 }
-.f-right {
+.flx-r {
   margin-left: auto;
 }
-.f-left {
+.flx-l {
   margin-right: auto;
 }
 

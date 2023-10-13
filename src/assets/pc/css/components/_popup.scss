@@ -1,6 +1,28 @@
 /**************************************************************************************************
 *** 팝업
 **************************************************************************************************/
+/*** modal popup 가로사이즈 ***/
+.popup-wrap.w-xs {
+  .pop-box {
+    width: 400px;
+  }
+}
+.popup-wrap.w-sm {
+  .pop-box {
+    width: 540px;
+  }
+}
+.popup-wrap.w-md {
+  .pop-box {
+    width: 880px;
+  }
+}
+.popup-wrap.w-lg {
+  .pop-box {
+    width: 1080px;
+  }
+}
+
 /*** modal popup ***/
 .popup-wrap {
   position: absolute;
@@ -23,9 +45,11 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
+    height: 100%;
     max-height: 85vh;
     border-radius: 16px;
     overflow: hidden;
+
     .pop-header {
       position: relative;
       display: flex;
@@ -69,15 +93,30 @@
       }
     }
 
+    .pop-footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: #fff;
+      padding: 40px 0 60px;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .btn-wrap {
+        margin-top: 0;
+      }
+    }
     .pop-content {
       padding: 30px 40px 40px;
       border-radius: 0 0 16px 16px;
       background-color: #fff;
-      height: calc(100% - 140px);
+      height: calc(100% - 68px);
       overflow-y: auto;
     }
 
-    .pop-footer {
+    .pop-footer + .pop-content {
+      padding-bottom: 156px;
     }
   }
 }
@@ -86,6 +125,7 @@
 .popup-wrap.pop-main {
   .pop-box {
     width: 400px;
+    height: auto;
   }
   .pop-content {
     position: relative;
